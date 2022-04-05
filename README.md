@@ -49,7 +49,7 @@ Role.pluck("LOWER(name)")
 
 **:heavy_check_mark: SOLUTION**
 
- : It is recommended to use **Arel** !!!
+ It is recommended to use **Arel** !!!
 ___
  ## 4 Arel
  
