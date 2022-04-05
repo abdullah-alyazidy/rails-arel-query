@@ -471,7 +471,7 @@ class ApplicationRecord < ActiveRecord::Base
   end
 end
 ```
-This way you can write Employee[:email] instead of Employee.arel_table[:email]
+This way you can write **Employee[:email]** instead of **Employee.arel_table[:email]**
 ___
 
 - ### Customize
