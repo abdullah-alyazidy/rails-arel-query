@@ -477,6 +477,7 @@ ___
 - ### Customize
 Create Custome Function
 ***config > initializers > arel_date_extension.rb***
+
 you can define methods to use anywhere in your project
 
 ```ruby
