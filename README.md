@@ -1,6 +1,6 @@
 # Advanced Active Recored Query with Arel
 
-## Presentaion Map
+## Index
 
 1. **ActiveRecord**
 2. **ActiveRecord not enough**
@@ -230,7 +230,7 @@ ___
 - **Module Arel::Predications**
  Moving on. You can build several different conditions with Arel. We have methods for    **=,   IN,   >,   >=,   <,   <=**
 
-> **First: we defin this to use in following examples :small_red_triangle_down:**
+> **First: we should defin this to use in following examples :small_red_triangle_down:**
 ```ruby
 product = Product.arel_table
 ```
@@ -332,19 +332,10 @@ Role.where(role.grouping(role[:id].gt(5).and(role[:name].eq('admin'))).or(role[:
 ```ruby
 
 creators = User.arel_table.alias('creators')
-```
-
-```ruby
 
 updaters = User.arel_table.alias('updaters')
-```
-
-```ruby
 
 photos = Photo.arel_table
-```
-
-```ruby
 
 photos_with_credits =\
   photos.join(photos.join(creators, Arel::Nodes::OuterJoin).on(photos[:created_by_id].eq(creators[:id])))
@@ -405,6 +396,7 @@ Role.joins(role.join(employee, Arel::Nodes::OuterJoin).on(role[:id].eq(employee[
 
 Role.joins(role.join(employee, Arel::Nodes::FullOuterJoin).on(role[:id].eq(employee[:role_id])).join_sources)
 ```
+
 - **Join with conditions**
 
 ```ruby
@@ -432,7 +424,7 @@ Employee.left_joins(:role).where("roles.role_type = 1").count
 >> 1004
 ```
 **:heavy_exclamation_mark:**
-note it filters Roles and Employees, And that's not what we want==
+note it filters Roles and Employees, And that's not what we want
 
 just you can doing it by **sql pure**
 
@@ -457,7 +449,7 @@ Employee.joins(employee.join(role, Arel::Nodes::OuterJoin).on(employee[:role_id]
 >> 3656
 ```
 
-## 6 Gifts
+## 6 Gifts :gift:
 
 - ### Shorthand for arel_table
 When writing Arel in Rails you access columns through the arel_table method on your models like so:
@@ -514,8 +506,12 @@ Model.where(Model[:field].contain(Arel::Nodes.build_quoted('{1}')))
 ```
 ___
 
-- ### Converter
-convert from sql to Arel
+- ### Converter :arrows_counterclockwise:
+Sometimes you have a text sql and you don't know how to write it in Arel
+Here is this site... it converts any text sql to Arel
+
+:rocket: ***Have fun with Arel***
+
 http://www.scuttle.io/
 
 
