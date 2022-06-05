@@ -1,7 +1,7 @@
 # Advanced Active Recored Query with Arel
-## contributors:
-1. abdullah al-yazidy
-2. abdullah bin shamlan
+## contributors: 
+1. abdullah al-yazidy    https://github.com/abdullah-alyazidy
+2. abdullah bin shamlan  https://github.com/abdalluh-BinShamlan-Jisr
 
 ## Index
 
