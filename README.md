@@ -1,4 +1,7 @@
 # Advanced Active Recored Query with Arel
+## contributors:
+1. abdullah al-yazidy
+2. abdullah bin shamlan
 
 ## Index
 
